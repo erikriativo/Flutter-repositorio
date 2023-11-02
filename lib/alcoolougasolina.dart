@@ -24,7 +24,9 @@ class _AlcoolOuGasolinaState extends State<AlcoolOuGasolina> {
         _menssagem = "Melhor opção é Gasolina";
       });
     } else {
-      _menssagem = "Melhor opção é Alcool";
+      setState(() {
+      _menssagem = "Melhor opção é Alcool";  
+      });
     }
   }
 
@@ -43,7 +45,7 @@ class _AlcoolOuGasolinaState extends State<AlcoolOuGasolina> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Image.asset(
-              "images/alcoolougasolina/logo.png",
+              "assets/images/alcoolougasolina/logo.png",
             ),
             const Padding(
               padding: EdgeInsets.only(top: 20, bottom: 10),
@@ -95,7 +97,7 @@ class _AlcoolOuGasolinaState extends State<AlcoolOuGasolina> {
                           return null;
                         }),
                         backgroundColor: MaterialStateColor.resolveWith(
-                            (states) => Colors.blueGrey.shade200)),
+                            (states) => Colors.blue.shade300)),
                     child: const Text("Calcular",
                         style: TextStyle(
                           fontSize: 24,

@@ -9,7 +9,7 @@ class JokenPoPage extends StatefulWidget {
 }
 
 class _JokenPoPageState extends State<JokenPoPage> {
-  var _imageAsset = const AssetImage("images/jokenpo/padrao.png");
+  var _imageAsset = const AssetImage("assets/images/jokenpo/padrao.png");
   String _menssagem = "Aguardando Rodada, Faça sua escolha!";
   int wins = 0;
   int lose = 0;
@@ -20,8 +20,6 @@ class _JokenPoPageState extends State<JokenPoPage> {
     var numeroAleatoria = Random().nextInt(3);
     var escolhaDoApp = opcoes[numeroAleatoria];
 
-    print("Escolha do Usuarioa $escolhaDoUsuario");
-    print("Escolha do app: $escolhaDoApp");
 
     if ((escolhaDoUsuario == "pedra" && escolhaDoApp == "tesoura")||
     (escolhaDoUsuario == "papel" && escolhaDoApp == "pedra")||
@@ -46,17 +44,17 @@ class _JokenPoPageState extends State<JokenPoPage> {
     switch (escolhaDoApp) {
       case "pedra":
         setState(() {
-          _imageAsset = const AssetImage("images/jokenpo/pedra.png");
+          _imageAsset = const AssetImage("assets/images/jokenpo/pedra.png");
         });
         break;
       case "papel":
         setState(() {
-          _imageAsset = const AssetImage("images/jokenpo/papel.png");
+          _imageAsset = const AssetImage("assets/images/jokenpo/papel.png");
         });
         break;
       case "tesoura":
         setState(() {
-          _imageAsset = const AssetImage("images/jokenpo/tesoura.png");
+          _imageAsset = const AssetImage("assets/images/jokenpo/tesoura.png");
         });
         break;
     }
@@ -92,19 +90,19 @@ class _JokenPoPageState extends State<JokenPoPage> {
                   onTap: () {
                     opcaoSelecionada("pedra");
                   },
-                  child: Image.asset("images/jokenpo/pedra.png"),
+                  child: Image.asset("assets/images/jokenpo/pedra.png"),
                 ),
                 GestureDetector(
                   onTap: () {
                     opcaoSelecionada("papel");
                   },
-                  child: Image.asset("images/jokenpo/papel.png"),
+                  child: Image.asset("assets/images/jokenpo/papel.png"),
                 ),
                 GestureDetector(
                   onTap: () {
                     opcaoSelecionada("tesoura");
                   },
-                  child: Image.asset("images/jokenpo/tesoura.png"),
+                  child: Image.asset("assets/images/jokenpo/tesoura.png"),
                 ),
                 /*
                 Image.asset(
