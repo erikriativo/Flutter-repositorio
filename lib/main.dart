@@ -18,10 +18,9 @@ void main() {
       '/jokenpo': (context) => const JokenPoPage(),
       '/alcoolougasolina': (context) => const AlcoolOuGasolina(),
       '/checkbox': (context) => const CheckBox(),
-      '/navegacao' : (context) => const Navegacao(),
-      '/ATMconsultoria' : (context) => const HomepageATM(),
-      '/caraoucoroa' : (context) => const CaraOuCoroa()
-      
+      '/navegacao': (context) => const Navegacao(),
+      '/ATMconsultoria': (context) => const HomepageATM(),
+      '/caraoucoroa': (context) => const CaraOuCoroa()
     },
   ));
 }
@@ -44,7 +43,7 @@ class _HomeStatefulState extends State<HomeStateful> {
     "'Se você quer descobrir o segredo do Universo, pense em termos de energia, frequência e vibração - Neville Goddard(1905-1972).'",
     "'Não é o que acontece com você que importa, mas a maneira como você reage ao que acontece com você - Epiteto(55-135).'",
   ];
-  var fraseGerada = "";
+  var fraseGerada = "Clique em 'Nova Frase' para o seu dia";
   int randomNumeroLista = 0;
   void gerarFrase() {
     var numeroRandom = Random().nextInt(listaFrases.length);
@@ -80,18 +79,21 @@ class _HomeStatefulState extends State<HomeStateful> {
               ElevatedButton(
                   onPressed: gerarFrase,
                   style: ButtonStyle(
-                      shape: const MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(6)))),
-                      backgroundColor: MaterialStateProperty.resolveWith((states) 
-                      => Colors.green.shade300),
+                      shape: const MaterialStatePropertyAll(
+                          RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(6)))),
+                      backgroundColor: MaterialStateProperty.resolveWith(
+                          (states) => Colors.green.shade300),
                       overlayColor: MaterialStateProperty.resolveWith((state) {
-                    if (state.contains(MaterialState.hovered)) {
-                      return Colors.green;
-                    }
-                    if (state.contains(MaterialState.focused)) {
-                      return Colors.green;
-                    }
-                    return null;
-                  })),
+                        if (state.contains(MaterialState.hovered)) {
+                          return Colors.green;
+                        }
+                        if (state.contains(MaterialState.focused)) {
+                          return Colors.green;
+                        }
+                        return null;
+                      })),
                   child: const Text(
                     "Nova Frase",
                     style: TextStyle(
@@ -119,7 +121,6 @@ class _HomeStatefulState extends State<HomeStateful> {
                           },
                           child: const Text("Cara ou Coroa")),
                     ),
-                    
                   ],
                 ),
               ),
@@ -127,19 +128,20 @@ class _HomeStatefulState extends State<HomeStateful> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, "/checkbox");
-                        },
-                        child: const Text("Checkbox"))
-                ],),
-                Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, "/alcoolougasolina");
-                          },
-                          child: const Text("Entrada de dados")),
-                    ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/checkbox");
+                      },
+                      child: const Text("Checkbox"))
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/alcoolougasolina");
+                    },
+                    child: const Text("Entrada de dados")),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -148,7 +150,7 @@ class _HomeStatefulState extends State<HomeStateful> {
                         Navigator.pushNamed(context, "/navegacao");
                       },
                       child: const Text("Exemplos de Navegação")),
-                   ElevatedButton(
+                  ElevatedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, "/ATMconsultoria");
                       },

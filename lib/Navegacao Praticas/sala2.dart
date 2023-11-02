@@ -12,8 +12,9 @@ class Sala02 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Sala 02"),
+        backgroundColor: Colors.amber,
       ),
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.amber.shade400,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

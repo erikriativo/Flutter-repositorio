@@ -16,8 +16,9 @@ class _Sala01State extends State<Sala01> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Sala 02"),
+        backgroundColor: Colors.amber,
       ),
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.amber.shade400,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

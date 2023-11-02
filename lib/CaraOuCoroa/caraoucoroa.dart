@@ -11,12 +11,26 @@ class CaraOuCoroa extends StatefulWidget {
 }
 
 class _CaraOuCoroaState extends State<CaraOuCoroa> {
+  String? imageLance;
+  int numeroRandom = 0;
+  List<String> lances = ["cara", "coroa"];
+
+  imageJogar() {
+    numeroRandom = Random().nextInt(2);
+    var resultado = lances[numeroRandom];
+
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: ((context) => Resultado(resultado))));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 67, 224, 161),
+      backgroundColor: const Color(0xff61bd86),
       appBar: AppBar(
+        backgroundColor: const Color(0xff61bd86),
       ),
       body: Center(
         child: Container(
@@ -28,9 +42,7 @@ class _CaraOuCoroaState extends State<CaraOuCoroa> {
               GestureDetector(
                 child: Image.asset("assets/images/caraOucoroa/botao_jogar.png"),
                 onTap: () {
-                  var randomInt = Random().nextInt(2);
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => Resultado(valor: randomInt,))));
+                  imageJogar();
                 },
               )
             ],
