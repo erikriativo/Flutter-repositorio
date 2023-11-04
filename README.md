@@ -4,7 +4,7 @@
 
 ## Abordagens
 
-Esse é um App em que é possível explorar funcionalidades como Interface com as novas classes do Material Dart Gerenciamento de Estado, Navegação, Passagem de Dados, Alinhamentos e diversos Widgets necessários para construição de um App.
+Esse é um App em que é possível explorar funcionalidades como Interface com as novas classes do Material Dart Gerenciamento de Estado, Navegação, Passagem de Dados, Alinhamentos, diversos Widgets, consumo de APIs e Animações em flutter para construição de Apps.
 
 Aproveite para adquirir alguns conhecimentos de exemplos e funcionalidades que pode ser implementado em seu APP também.
 
