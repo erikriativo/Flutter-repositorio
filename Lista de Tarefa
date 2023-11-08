@@ -1,0 +1,4 @@
+Aqui construimos um App Lista de Tarefas simples com o uso de path_provider, Dismissible e muito mais.
+
+Nesta biblioteca é possível entender como manipular dados locais salvos no próprio dispositivo do usuário dentro do seu aplicativo
+e entender como utilizar esses dados nos nossos Widgets para exibição dos dados.
