@@ -1,10 +1,14 @@
 # lista_tarefas_simples
 
-"A new Flutter project."
+Esse app utiliza path_provider, dismissible, recuperação dos dados, conversões json.
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Utilize as depêndencias para utilização do path_provider,
+Esse é apenas uma das várias formas em que você pode implementar o path_provider em seus apps
+armazenando os dados no próprio dispositivo do usuário.
+É uma grande ferramenta, utilizada da maneira correta pode poupar muito dinheiro em banco de dados rs...
 
 A few resources to get you started if this is your first Flutter project:
 
