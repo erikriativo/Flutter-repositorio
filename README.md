@@ -1,6 +1,6 @@
 # Série de Apps
 
-"Coletânea de Projetos em flutter com diversas funcionalidades tudo em um só app"
+"Coletânea de Projetos em flutter com diversas funcionalidades tudo em um só repositório"
 
 ## Abordagens
 
